@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>House Price Predictor</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h2>Enter House Size (sq ft):</h2>
+  <form method="POST" action="/predict">
+    <input type="number" name="size" required>
+    <input type="submit" value="Predict Price">
+  </form>
+  <h3>{{ result }}</h3>
+</body>
+</html>
